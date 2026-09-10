@@ -1,0 +1,21 @@
+// Este archivo es un ejemplo de configuración de Log4j2 para una aplicación Java. 
+// Define un appender de consola que imprime los mensajes de log en la salida estándar (SYSTEM_OUT) con un formato específico que incluye la hora, 
+// el hilo, el nivel de log, el nombre del logger y el mensaje. El nivel raíz de log se establece en "info", lo que significa que solo se registrarán mensajes de nivel "info" y superiores (warn, error, fatal).
+
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name = "File" fileName = "logs/application.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration> 
