@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class App {
+public class AGpp {
         public static void main(String[] args) {
       //ejemplo2();  
       //ejemplo2_version2();
